@@ -110,7 +110,7 @@ app.post("/api/tables", function(req, res) {
   } else {
     waitlist.push(newReservation);
     
-    res.json(newReservation);
+    res.end();
   }
 });
 
