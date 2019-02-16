@@ -19,18 +19,17 @@ app.use("/public", express.static(__dirname + "/public"));
 var tables = [
   {
     name: "",
-    phone: ,
+    phone: "",
     email: "",
     uniqueID: ""
-  }
-  var waitList = {
+  }];
+var waitList = [{
   
     name: "",
-    phone: ,
+    phone: "",
     email: "",
-    uniqueID: ""
-  }
-];
+    uniqueID: 
+}];
 
 // Routes
 // =============================================================
