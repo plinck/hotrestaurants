@@ -22,14 +22,16 @@ var tables = [
     phone: "",
     email: "",
     uniqueID: ""
-  }];
-var waitList = [{
-  
+  }
+];
+var waitList = [
+  {
     name: "",
     phone: "",
     email: "",
     uniqueID: 
-}];
+  }
+];
 
 // Routes
 // =============================================================
