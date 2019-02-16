@@ -12,28 +12,24 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Star Wars Characters (DATA)
+app.use("/public", express.static(__dirname + "/public"));
+
+// Reservations names (DATA)
 // =============================================================
-var reservations = [
+var tables = [
   {
     name: "",
-    phone: ,
+    phone: "",
     email: "",
     uniqueID: ""
-  },
+  }
+];
+var waitList = [
   {
-    routeName: "darthmaul",
-    name: "Darth Maul",
-    role: "Sith Lord",
-    age: 200,
-    forcePoints: 1200
-  },
-  {
-    routeName: "obiwankenobi",
-    name: "Obi Wan Kenobi",
-    role: "Jedi Master",
-    age: 55,
-    forcePoints: 1350
+    name: "",
+    phone: "",
+    email: "",
+    uniqueID: 
   }
 ];
 
@@ -54,8 +50,8 @@ app.get("/tables", function(req, res) {
   });
 
 // Displays all reservations
-app.get("/api/reservations", function(req, res) {
-  return res.json(reservations);
+app.get("/api/tables", function(req, res) {
+  return res.json(tables);
 });
 
 // Displays a single reservation, or returns false
@@ -73,7 +69,9 @@ app.get("/api/reservations/:reservation", function(req, res) {
   return res.json(false);
 });
 
-// Create New Characters - takes in JSON input
+
+
+// Create New names - takes in JSON input
 app.post("/api/reservations", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body parsing middleware
