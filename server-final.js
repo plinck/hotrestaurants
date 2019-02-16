@@ -16,7 +16,7 @@ app.use(express.json());
 // first parameter is the mount point, second is the location in the file system
 // This tells express the static dir we will use for the files vs embedding it
 // directly in the HTML, so in the html file, we can use :
-//   <script src="client/assets/js/tables.js" type="text/javascript"></script>
+//   <script src="public/assets/js/tables.js" type="text/javascript"></script>
 app.use("/public", express.static(__dirname + "/public"));
 
 // Tables
